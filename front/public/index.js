@@ -2,8 +2,8 @@
 // getTodos()는 추후에 HTML DOM 내용이 완전히 로드되었을 때 실행되어야 합니다.
 async function getTodos() {
   axios({
-    method: 'get',
-    url: 'https://jsonplaceholder.typicode.com/todos',
+    method: "get",
+    url: "https://jsonplaceholder.typicode.com/todos",
     params: data,
   })
     .then(function (response) {
@@ -22,13 +22,15 @@ async function getTodos() {
   - 입력 창에서 Enter 키 입력시에도 addTodo() 함수가 실행됩니다.
 */
 function addTodo() {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
 }
 
 /*  3. x 버튼을 클릭하면 클릭한 버튼을 갖는 Todo 항목이 삭제됩니다. */
 // 삭제 함수의 이름 및 모양 변경 가능
 function deleteTodo(item) {
-  $("button[type='button']").click(function () {});
+  $(".todo_list li > button").click(function () {
+    $(this).parent("li").remove();
+  });
 }
 
 /* 
