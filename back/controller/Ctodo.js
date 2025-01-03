@@ -61,11 +61,10 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
   try {
     console.log(req.params);
-    // { playerId: '2' }
-    const { playerId } = req.params;
-    const isDeleted = await Player.destroy({
+    const { TodoId } = req.params;
+    const isDeleted = await Todo.destroy({
       where: {
-        player_id: playerId,
+        id: TodoId,
       },
     });
     console.log("삭제 여부", isDeleted);
