@@ -1,0 +1,112 @@
+/* 가상 클래스 선택자 root의 색상들은 필수 사용요소가 아닙니다.
+색상은 자유롭게 구성해주세요. */
+:root {
+  --main-color: #04c82f;
+  --main-bg-color: #e5ffeb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content_wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+}
+header {
+}
+header h1.main_tit {
+  background: #04c82f;
+  padding: 13px;
+  text-align: center;
+}
+header h1.main_tit > img {
+  display: inline-block;
+  height: 40px;
+  vertical-align: middle;
+}
+header h1.main_tit > p {
+  display: inline-block;
+  color: #fff;
+}
+
+.content_wrap main {
+  background: #e5ffeb;
+}
+main form[name='todoForm'] {
+  padding: 20px;
+  text-align: center;
+}
+main form[name='todoForm'] input[type='text'] {
+  border: 1px solid #04c82f;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+}
+main form[name='todoForm'] button {
+  outline: none;
+  border: 1px solid #04c82f;
+  padding: 5px 8px;
+  border-radius: 9px;
+  background: transparent;
+  color: #04c82f;
+  font-size: 14px;
+}
+main form[name='todoForm'] + ul.todo_list {
+  margin-top: 20px;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+main form[name='todoForm'] + ul.todo_list > li {
+  width: calc((100% / 4) - 15px);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+main form[name='todoForm'] + ul.todo_list > li input[type='checkbox'] {
+}
+main form[name='todoForm'] + ul.todo_list > li input[type='checkbox'] + span {
+  font-size: 14px;
+}
+main form[name='todoForm'] + ul.todo_list > li button {
+  outline: none;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #04c82f;
+  color: #fff;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 540px) and (max-width: 960px) {
+  .content_wrap {
+    max-width: 800px;
+  }
+  main form[name='todoForm'] + ul.todo_list > li {
+    width: calc((100% / 2) - 15px);
+  }
+}
+@media screen and (max-width: 540px) {
+  header h1.main_tit > img,
+  header h1.main_tit > p {
+    display: block !important;
+    margin: 0 auto;
+    height: 28px !important;
+    font-size: 28px;
+  }
+  main form[name='todoForm'] + ul.todo_list > li {
+    width: 100%;
+  }
+}

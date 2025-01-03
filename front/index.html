@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/index.css" />
+    <script defer src="./public/index.js"></script>
+    <title>백다현</title>
+    <!-- axios CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="content_wrap">
+      <header>
+        <h1 class="main_tit">
+          <img src="./public/codingon.png" alt="로고 이미지" />
+          <p>Todo List</p>
+        </h1>
+      </header>
+      <main>
+        <!-- input 작성 -->
+        <form name="todoForm" method="get">
+          <input type="text" name="" id="" placeholder="today`s to do" />
+          <button type="submit" onclick="addTodo()">작성</button>
+        </form>
+
+        <ul class="todo_list">
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="todoList" />
+              <span>할일 목록</span>
+            </label>
+            <button type="button" onclick="deleteTodo()">X</button>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
